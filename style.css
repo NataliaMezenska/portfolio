@@ -1,0 +1,521 @@
+@font-face {
+    font-family: "Agrandir";
+    src: url("PPAgrandir-Regular.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Agrandir";
+    src: url("PPAgrandirText-Bold.otf") format("opentype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Agrandir";
+    src: url("PPAgrandir-TightRegular.otf") format("opentype");
+    font-weight: 500;
+}
+.nav a { /*ABOUT ME, MY WORK, SERVICES*/
+    font-family: "Agrandir", sans-serif;
+    font-weight: 700;
+    font-size: 20px;          /* rozmiar tekstu */
+    letter-spacing: 1px;      /* odstęp między literami */
+}
+
+/* Remove header background duplicate (body already sets it) */
+header {
+    padding-top: 5px;    /* ODLEGŁOŚĆ LOGO OD GÓRY */
+    padding-bottom: 10px; /* ODLEGŁOŚĆ MENU OD LOGO */
+}
+
+/* Combine .name-title/.form-label/.form-input font settings and their layout */
+.name-title,
+.form-label,
+.form-input {
+    font-family: "Agrandir", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.form-label {
+    display: block;
+    margin: 0 0 -5px 0 !important;
+    padding: 0 !important;
+}
+.form-input {
+    margin: 0 0 10px 0 !important;
+    display: block;
+}
+
+.social-icon-text { /*LinkedIn + email imię i adres*/
+    font-family: "Agrandir", sans-serif;
+    font-weight: 500;
+    font-size: 17px;          /* rozmiar tekstu */
+    letter-spacing: 1px;     /* odstęp między literami */
+}
+body {
+  margin: 0;
+  font-family: 'Agrandir', sans-serif;
+  background-color: #903524; /* dopasuj do tła ze screena */
+}
+
+/* GÓRNY WIERSZ — LOGO */
+.top-row {
+    display: flex;
+    justify-content: center;
+}
+.top-row .logo {
+    width: 250px;    /* zmień jeśli chcesz większe/mniejsze logo */
+}
+/* DOLNY WIERSZ – LINKI */
+.bottom-row {
+    display: flex;
+    width: 100%;
+    margin-top: 1px;   /* teraz działa! */
+}
+/* 1️⃣ LEWA KRAWĘDŹ → ABOUT ME */
+.about {
+    margin-left: 100px;      /* ustaw ile chcesz */
+}
+/* 2️⃣ ABOUT ME → MY WORK */
+.work {
+    margin-left: 150px;     /* ustaw ile chcesz */
+}
+/* 3️⃣ MY WORK → SERVICES */
+.services {
+    margin-left: 600px;     /* ustaw ile chcesz */
+    margin-right: 100px;     /* ustaw ile chcesz */
+}
+.bottom-row a {
+    color: #ecb5bc;     /* dopasuj do swojego tła (#903524) */
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+.header-photo {
+    width: 200px;      /* szerokość zdjęcia */
+    height: auto;      /* proporcje pozostają naturalne */
+    margin-left: 20px; /* odstęp od logo */
+}
+.contact-container {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* zdjęcie | prawa kolumna */
+  gap: -150px;
+  align-items: start;
+}
+
+/* lewa kolumna */
+.photo-section {
+  max-width: 350px;
+   margin-top: 20px;   /* 🔼 tylko zdjęcie w dół */
+}
+
+.photo-section img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: block;
+  border-radius: 8px;
+}
+
+/* prawa kolumna */
+.form-column {
+  display: flex;
+  flex-direction: column;
+   padding-left: 20px;   /* 🔥 TO jest realna odległość */
+    margin-top: 40px;   /* 🔽 zwiększ / zmniejsz */
+}
+
+.home-text {
+  text-align: center;
+  margin-bottom: -50px; /* 🔼 im więcej, tym dalej od formularza */
+   transform: translateX(-20px);  /* 🔥 przesuwa napis w lewo */
+}
+
+.home-text h1,
+.home-text h2 {
+  margin: 0 0 10px 0;
+  position: static;
+}
+.home-text h1 {
+  color: #eb8499;  
+font-family: "Agrandir", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.home-text h2 {
+  color: #eb8499;
+font-family: "Agrandir", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* ===== WRAPPER SEKCJI GŁÓWNEJ ===== */
+.home-form {
+  max-width: 1100px;     /* 🔥 KLUCZ */
+  margin: 0 auto;        /* 🔥 centrowanie */
+  padding:0 40px;       /* 🔥 oddech od krawędzi */
+  margin-top: 5px;   /* 🔼 zwiększ / zmniejsz *//*odległość od góry, od zakładek*/
+  padding-left: 150px;   /* 🔥 TO PRZESUWA ZDJĘCIE W PRAWO */
+  
+}
+
+
+/* FORMULARZ */
+.form-box {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;               /* odstęp między wierszami */
+      margin-top: 60px;    /* ← przesunięcie w dół */
+}
+.form-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🔥 TO JEST KLUCZ */
+}
+
+
+/* Etykiety */
+.form-box label {
+    color: #ffffff; /* białe napisy */
+    font-weight: 500;
+}
+
+/* Pola input */
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+      font-size: 14px;
+}
+.form-box button {
+    width: 160px;                /* przycisk mały */
+    padding: 8px 12px;
+    border-radius: 12px;
+    background-color: #f5b4c1;   /* różowy */
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: auto;           /* wyrównanie do prawej */
+    display: block;
+    text-align: center;
+}
+/* TYLKO MESSAGE większe */
+#message {
+    height: 60px;
+}
+
+
+
+
+.social-wrapper {
+  position: absolute;
+
+  left: 50%;
+  bottom: -70px;              /* 🔽 OD DOŁU */
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding-bottom: 10px;  /* ⭐ to jest “odstęp od dołu” w najpewniejszy sposób */
+}
+
+.social-item a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-icon {
+    width: 28px;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.social-item span {
+      font-family: 'Agrandir', sans-serif;
+       font-weight: 500;
+  letter-spacing: 1.5px;
+    font-size: 13px;   /* mniejszy tekst */
+    color: white;      /* biały tekst */
+}
+
+
+
+
+
+.footer-bottom {
+  width: 100%;
+  background-color: #8b3627;
+  padding: 20px 0;
+
+
+position: relative;   /* 🔴 KLUCZ */
+
+}
+
+.footer-bottom-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.footer-bottom .icon {
+    width: 22px;
+}
+
+.footer-bottom .footer-logo {
+    width: 60px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+.corner-logo {
+    position: fixed;
+    bottom: 20px;  /* od dołu */
+    right: 20px;   /* od prawej krawędzi ekranu */
+    width: 50px;   /* rozmiar małego logo */
+    z-index: 9999;
+}
+.submit-btn {
+    font-family: "Agrandir", sans-serif;
+    font-weight: 400; /* możesz zmienić na 500 lub 700 */
+    font-size: 13px;  /* zmieniasz jak chcesz */
+    letter-spacing: 0.5px; /* ładniejszy wygląd */
+}
+
+
+
+
+
+
+                                                                /*ABOUT ME PAGE */
+/* ABOUT PAGE BACKGROUND */
+.about-body {
+    background-color: #903524;
+    margin: 0;
+    padding: 0;
+    font-family: 'Agrandir', sans-serif;
+    color: white;
+}
+/* PAGE LAYOUT */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 80px; /*odstęp od menu, od góry - ten pierwszy */
+    gap: 60px;
+}
+/* TEXT SECTION */
+.about-text {
+    max-width: 500px;
+}
+.about-text h1 {
+    color: #ebb3ba;
+    font-size: 36px;
+    margin-bottom: 0;
+}
+.underline {
+    width: 190px;             /* długość paska */
+    height: 3px;              /* grubość paska */
+    background-color: #ebb3ba;
+    margin-top: -15px;            /* odstęp nad paskiem */
+    margin-bottom: 10px;      /* odstęp pod paskiem */
+
+    display: block;              /* wymusza idealny pasek */
+    border: none;                /* zero obramowania */
+    outline: none;               /* zero outline */
+    box-shadow: none;            /* usuwa szary cień */
+}
+/* PARAGRAPHS */
+.about-text p {
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+/* IMAGE */
+.about-image img {
+    width: 300px; /*rozmiar zdjęcia*/
+    height: auto;
+    border-radius: 5px;
+}
+.about-text, 
+.about-text p {
+    font-family: 'Agrandir', sans-serif;
+}
+
+.about-text h1 {
+    font-family: 'Agrandir', sans-serif;
+    font-weight: 700; /* BOLD */
+    color: #ebb3ba;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+                                                                /*MY WORK PAGE*/
+/* WORK PAGE LAYOUT */
+/* ========================= */
+
+.work-section {
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.work-title {
+  color: #ebb3ba;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* tytuł + underline jak About Me */
+.work-section .work-title {
+  text-align: left;
+  margin-left: 60px;
+  margin-top: -10px;
+}
+
+.work-section .underline {
+  margin-left: 60px;
+  margin-top: -15px;
+  width: 180px;
+}
+
+/* =========================
+   GRID OF PROJECTS
+   ========================= */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 80px 60px;        /* pion / poziom */
+  max-width: 1000px;
+  margin: 60px auto 0;  /* środek strony */
+}
+
+/* =========================
+   SINGLE PROJECT
+   ========================= */
+
+.work-item {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.work-item:hover {
+  transform: translateY(-6px);
+}
+
+.work-item img {
+  width: 260px;
+  border: 3px dashed #ebb3ba;
+  border-radius: 8px;
+  padding: 6px;
+  display: block;
+  margin: 0 auto;
+}
+
+.work-item p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   PROJECT IN PROGRESS
+   ========================= */
+
+.work-item.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  margin-top: 30px;
+}
+
+.work-item.disabled img {
+  width: 120px;
+  border: none;
+  padding: 0;
+}
+
+
+
+                                                                    /* SERVICES PAGE */
+.services-section {
+    padding: 60px 80px;
+}
+.services-title {
+    color: #ebb3ba;
+    font-size: 36px;
+    margin-left: 300px;
+    margin-top: -10px;     /* PODNOSI napis w górę */
+    margin-bottom: 10px;
+}
+/* Pasek POD napisem – taki sam jak ABOUT ME / MY WORK */
+.services-section .underline {
+    width: 180px;              /* długość paska – ustaw tak jak w Work/About */
+    height: 3px;               /* grubość paska – IDENTYCZNA */
+    background-color: #ebb3ba; /* kolor paska */
+    
+    margin-left: 300px;        /* wyrównanie do tytułu SERVICES */
+    margin-top: -15px;          /* lekka korekta wysokości */
+    margin-bottom: 40px;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+    display: block;
+}
+/* LIST */
+.services-list {
+  list-style: none;
+    margin-left: 140px;
+    font-size: 18px;
+    color: white;
+    line-height: 2.2;
+}
+.services-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 14px;
+  font-weight: 500; 
+  letter-spacing: 0.05em;
+}
+.services-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid #febbba;
+  border-radius: 50%;
+}
+.services-list li span {
+  font-weight: 500;
+}
