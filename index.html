@@ -35,7 +35,7 @@
       <h2>Welcome in my mind!</h2>
     </div>
 
-    <form id="contact-form" class="form-box" onsubmit="sendEmail(event)">
+    <form id="contact-form" class="form-box">
         <label for="name" class="form-label">Name & Surname</label>
         <input type="text" id="name" name="name" class="form-input" required>
 
@@ -48,7 +48,10 @@
 <label for="message" class="form-label">Message</label>
 <textarea id="message" name="message" class="form-input" required></textarea>
 
-        <button type="submit" class="submit-btn">Send a message!</button>
+     <button type="button" class="submit-btn" onclick="sendEmail(event)">
+  Send a message!
+</button>
+        
     </form>
 
 
@@ -113,6 +116,7 @@ function sendEmail(e) {
 
 </body>
 </html>
+
 
 
 
