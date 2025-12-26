@@ -35,7 +35,7 @@
       <h2>Welcome in my mind!</h2>
     </div>
 
-    <form id="contact-form" class="form-box">
+    <form id="contact-form" class="form-box" onsubmit="sendEmail(event)">
         <label for="name" class="form-label">Name & Surname</label>
         <input type="text" id="name" name="name" class="form-input" required>
 
@@ -91,13 +91,13 @@
 </script>
 
 <script>
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
+function sendEmail(e) {
+  e.preventDefault(); // ⛔ 100% BLOKUJE URL
 
   emailjs.sendForm(
     "service_qqebkf4",
     "template_11bz8w8",
-    this
+    document.getElementById("contact-form")
   ).then(
     function() {
       alert("Message sent 💌");
@@ -107,11 +107,12 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
       alert("Error: " + error.text);
     }
   );
-});
+}
 </script>
     
 
 </body>
 </html>
+
 
 
