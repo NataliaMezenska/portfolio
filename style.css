@@ -521,59 +521,117 @@ position: relative;   /* 🔴 KLUCZ */
 
 }
 
+/* =========================
+   MOBILE VERSION
+========================= */
 @media (max-width: 768px) {
 
+  /* --- RESET / BEZPIECZEŃSTWO --- */
   body {
     overflow-x: hidden;
+    margin: 0;
   }
 
   section {
     padding: 40px 20px;
   }
-    header,
-  nav {
+
+  /* =========================
+     HEADER + MENU
+  ========================= */
+  header {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
   }
 
-  nav a {
+  .top-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .bottom-row-nav {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .bottom-row-nav a {
     font-size: 12px;
     letter-spacing: 1px;
   }
-      .hero {
+
+  /* =========================
+     HERO / CONTACT (SCREEN 5)
+  ========================= */
+
+  /* ZŁAMANIE GRIDU */
+  .contact-container {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* KOLEJNOŚĆ ELEMENTÓW */
+  .home-text {
+    order: 1;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .photo-section {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .form-column {
+    order: 3;
+    width: 100%;
+    max-width: 330px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 25px;
   }
 
-  .hero-text h1 {
-    font-size: 24px;
+  /* TEKST */
+  .home-text h1 {
+    font-size: 22px;
   }
 
-  .hero-text h2 {
-    font-size: 16px;
+  .home-text h2 {
+    font-size: 14px;
   }
-      .hero img {
+
+  /* ZDJĘCIE */
+  .photo-section img {
     width: 100%;
     max-width: 260px;
     height: auto;
   }
-      form {
-    width: 100%;
-    max-width: 320px;
-  }
 
-  input,
-  textarea {
+  /* FORMULARZ */
+  .form-column form,
+  .form-column input,
+  .form-column textarea {
     width: 100%;
   }
 
-  button {
+  .form-column button {
     margin-top: 15px;
   }
+
+  /* =========================
+     ABOUT ME (SCREEN 6)
+  ========================= */
   .about-section {
+    display: flex;
     flex-direction: column;
     text-align: center;
   }
@@ -586,7 +644,12 @@ position: relative;   /* 🔴 KLUCZ */
     font-size: 14px;
     line-height: 1.6;
   }
-     .work-grid {
+
+  /* =========================
+     MY WORK (SCREEN 7)
+  ========================= */
+  .work-grid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
   }
@@ -599,7 +662,11 @@ position: relative;   /* 🔴 KLUCZ */
   .work-item p {
     font-size: 13px;
   }
-     .services-section {
+
+  /* =========================
+     SERVICES (SCREEN 8)
+  ========================= */
+  .services-section {
     text-align: left;
   }
 
@@ -608,13 +675,19 @@ position: relative;   /* 🔴 KLUCZ */
   }
 
   .services-section li {
-    margin-bottom: 15px;
     font-size: 14px;
     line-height: 1.5;
+    margin-bottom: 15px;
   }
- footer {
+
+  /* =========================
+     FOOTER
+  ========================= */
+  footer {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     font-size: 12px;
   }
-
+}
