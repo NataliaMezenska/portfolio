@@ -526,168 +526,222 @@ position: relative;   /* 🔴 KLUCZ */
 ========================= */
 @media (max-width: 768px) {
 
-  /* --- RESET / BEZPIECZEŃSTWO --- */
   body {
-    overflow-x: hidden;
     margin: 0;
-  }
-
-  section {
-    padding: 40px 20px;
+    overflow-x: hidden;
   }
 
   /* =========================
-     HEADER + MENU
+     HEADER (logo po lewej, menu po prawej)
   ========================= */
   header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
   }
 
   .top-row {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+    justify-content: flex-start;
+    padding: 14px 16px 0 16px;
+    box-sizing: border-box;
+  }
+
+  /* jeśli logo jest obrazkiem */
+  .top-row img {
+    height: 46px;
+    width: auto;
   }
 
   .bottom-row-nav {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 14px;
-    flex-wrap: wrap;
+    padding: 6px 16px 0 16px;
+    box-sizing: border-box;
   }
 
   .bottom-row-nav a {
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
   }
 
   /* =========================
-     HERO / CONTACT (SCREEN 5)
+     HOME (screen 5)
+     - rząd 1: tekst + zdjęcie obok siebie
+     - rząd 2: formularz na całą szerokość
   ========================= */
 
-  /* ZŁAMANIE GRIDU */
+  /* robimy grid z obszarami */
   .contact-container {
-    display: flex !important;
-    flex-direction: column !important;
-    grid-template-columns: 1fr !important;
-    align-items: center;
     width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "text photo"
+      "form form";
+    gap: 16px;
+    align-items: start;
+    padding: 18px 16px 0 16px;
+    box-sizing: border-box;
   }
 
-  /* KOLEJNOŚĆ ELEMENTÓW */
-  .home-text {
-    order: 1;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  .photo-section {
-    order: 2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-
+  /* pozwala dzieciom .form-column wejść do grida */
   .form-column {
-    order: 3;
-    width: 100%;
-    max-width: 330px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: contents !important;
   }
 
-  /* TEKST */
+  .home-text {
+    grid-area: text;
+    text-align: left;        /* jak na screenie 5 */
+    align-self: start;
+    margin-top: 10px;
+  }
+
   .home-text h1 {
-    font-size: 22px;
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0 0 6px 0;
   }
 
   .home-text h2 {
-    font-size: 14px;
+    font-size: 13px;
+    margin: 0;
   }
 
-  /* ZDJĘCIE */
+  .photo-section {
+    grid-area: photo;
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .photo-section img {
     width: 100%;
-    max-width: 260px;
+    max-width: 165px;   /* zdjęcie jak na screenie 5 */
     height: auto;
+    display: block;
   }
 
-  /* FORMULARZ */
+  /* formularz pod spodem na całą szerokość */
   .form-column form,
-  .form-column input,
-  .form-column textarea {
+  form {
+    grid-area: form;
     width: 100%;
+    max-width: 320px;
+    margin: 0 auto;     /* centrowanie formularza */
   }
 
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  button,
   .form-column button {
-    margin-top: 15px;
+    margin-top: 12px;
   }
 
   /* =========================
-     ABOUT ME (SCREEN 6)
+     FOOTER (ikony/tekst w jednym rzędzie jak na screenie 5)
   ========================= */
-  .about-section {
+  footer {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    padding: 18px 12px 16px 12px;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    font-size: 11px;
+  }
+
+  footer img {
+    height: 18px;
+    width: auto;
+  }
+
+  /* =========================
+     ABOUT (screen 6) — sam tekst, bez zdjęcia
+  ========================= */
+  .about-section,
+  .about-container,
+  .about-content {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    box-sizing: border-box;
     text-align: center;
   }
 
-  .about-section img {
-    display: none;
+  /* chowamy zdjęcie jeśli jest w about */
+  .about-section img,
+  .about-container img,
+  .about-photo,
+  .about-image {
+    display: none !important;
   }
 
-  .about-section p {
-    font-size: 14px;
-    line-height: 1.6;
+  .about-section p,
+  .about-container p,
+  .about-content p {
+    font-size: 13px;
+    line-height: 1.65;
   }
 
   /* =========================
-     MY WORK (SCREEN 7)
+     MY WORK (screen 7) — 2 kolumny
   ========================= */
-  .work-grid {
+  .work-grid,
+  .projects-grid,
+  .mywork-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr; /* DWA kafelki w rzędzie */
+    gap: 18px;
+    padding: 18px 16px 24px 16px;
+    box-sizing: border-box;
   }
 
-  .work-item img {
+  .work-item img,
+  .project-item img,
+  .mywork-item img {
     width: 100%;
     height: auto;
+    display: block;
   }
 
-  .work-item p {
-    font-size: 13px;
+  .work-item p,
+  .project-item p,
+  .mywork-item p {
+    font-size: 11px;
+    line-height: 1.35;
   }
 
   /* =========================
-     SERVICES (SCREEN 8)
+     SERVICES (screen 8) — lista po lewej
   ========================= */
-  .services-section {
+  .services-section,
+  .services-container {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    box-sizing: border-box;
     text-align: left;
   }
 
-  .services-section ul {
-    padding-left: 20px;
+  .services-section ul,
+  .services-container ul {
+    padding-left: 18px;
+    margin: 0;
   }
 
-  .services-section li {
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-  }
-
-  /* =========================
-     FOOTER
-  ========================= */
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    font-size: 12px;
+  .services-section li,
+  .services-container li {
+    font-size: 12.5px;
+    line-height: 1.55;
+    margin-bottom: 14px;
   }
 }
