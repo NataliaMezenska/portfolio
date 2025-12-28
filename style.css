@@ -525,129 +525,214 @@ position: relative;   /* 🔴 KLUCZ */
    MOBILE VERSION
 ========================= */
 @media (max-width: 768px) {
-  html, body { margin: 0; width: 100%; overflow-x: hidden; }
-  * { box-sizing: border-box; }
-  img { max-width: 100%; height: auto; display: block; }
 
-  /* HEADER: logo lewo, menu obok siebie (jak screen 5) */
-  header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding: 10px 14px;
-    width:100%;
-  }
-  .top-row{ display:flex; align-items:center; }
-  .logo{ height:42px; width:auto; }
-
-  nav.bottom-row.nav{
-    display:flex;
-    gap:12px;
-    align-items:center;
-  }
-  nav.bottom-row.nav a{
-    font-size:11px;
-    letter-spacing:.6px;
-    white-space:nowrap;
+  /* =========================
+     RESET
+  ========================= */
+  html, body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
   }
 
-  /* INDEX: tekst po LEWEJ + zdjęcie po PRAWEJ, form pod spodem */
-  .home-form{ padding: 0 14px; }
+  * {
+    box-sizing: border-box;
+  }
 
-  .contact-container{
-    display:grid;
-    grid-template-columns: 1fr 160px;
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* =========================
+     HEADER – JAK NA SCREENIE
+     logo lewo, menu obok
+  ========================= */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    width: 100%;
+  }
+
+  .top-row {
+    flex: 0 0 auto;
+  }
+
+  .top-row .logo {
+    height: 42px;
+    width: auto;
+    display: block;
+  }
+
+  nav.bottom-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+
+  nav.bottom-row a {
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+  }
+
+  /* =========================
+     INDEX / HOME
+     tekst + zdjęcie obok
+     formularz pod spodem
+  ========================= */
+  .home-form {
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 150px;
     grid-template-areas:
       "text photo"
       "form form";
-    gap:16px;
-    width:100%;
+    gap: 16px;
   }
 
-  .photo-section{ grid-area: photo; display:flex; justify-content:flex-end; }
-  .portrait{ max-width:160px; border-radius:12px; }
+  .home-text {
+    grid-area: text;
+    text-align: left;
+    margin-top: 10px;
+  }
 
-  .form-column{ display: contents; }
+  .home-text h1 {
+    font-size: 15px;
+    line-height: 1.2;
+    max-width: 160px; /* DWIE LINIE */
+    margin-bottom: 6px;
+  }
 
-  .home-text{ grid-area: text; text-align:left; margin-top:10px; }
-  .home-text h1{ font-size:16px; margin:0 0 6px 0; line-height:1.2; }
-  .home-text h2{ font-size:13px; margin:0; }
+  .home-text h2 {
+    font-size: 13px;
+  }
 
-  form.form-box{
+  .photo-section {
+    grid-area: photo;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .portrait {
+    max-width: 150px;
+    border-radius: 12px;
+  }
+
+  .form-column {
+    display: contents;
+  }
+
+  form.form-box {
     grid-area: form;
-    width:100%;
-    max-width:320px;
+    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
   }
-  .form-input{ width:100%; }
 
-  /* SOCIALE: NA DOLE i BEZ PRZESUWANIA W BOK */
-  .social-wrapper{
+  .form-input {
+    width: 100%;
+  }
+
+  /* social icons – dół strony */
+  .social-wrapper {
     margin-top: 40px;
-    padding: 18px 0 22px 0;
-    display:flex;
-    justify-content:center;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
     gap: 18px;
-    width:100%;
   }
 
-  .social-item a{
-    display:flex;
-    align-items:center;
-    gap: 8px;
+  .social-item span {
+    display: none; /* tylko ikonki */
   }
 
-  .social-icon{ width:18px; height:auto; }
-
-  /* NA TELEFONIE ukrywamy długie napisy (żeby było jak na screen 5 i żeby nie pływało) */
-  .social-item span{
-    display:none;
+  .social-icon {
+    width: 18px;
   }
 
-  /* ABOUT: tekst na środku, tytuł mniejszy */
-  .about-section{
-    padding: 24px 16px;
+  /* =========================
+     ABOUT ME
+     tekst na środku
+  ========================= */
+  .about-section {
     max-width: 420px;
     margin: 0 auto;
-    text-align:center;
-  }
-  .about-text h1{ font-size:22px; }
-  .about-image{ display:none; }
-  .about-text p{ font-size:13px; line-height:1.6; }
-
-  /* WORK: 2 większe kafelki + sensowny tekst */
-  .work-section{ padding: 24px 16px; }
-  .work-title{ font-size:22px; text-align:center; }
-
-  .work-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-  }
-  .work-item img{ width:100%; height:auto; }
-  .work-item p{
-    font-size:12px;
-    line-height:1.35;
-    margin: 8px 0;
-    text-align:center;
-    /* to sprawia, że tekst łamie się normalnie, a nie po 1 słowie */
-    word-break: normal;
-    overflow-wrap: anywhere;
+    padding: 24px 16px;
+    text-align: center;
   }
 
-  /* SERVICES: szeroko, tytuł mniejszy */
-  .services-section{
-    padding: 24px 18px;
-    width:100%;
+  .about-text h1 {
+    font-size: 22px;
   }
-  .services-title{ font-size:22px; }
-  .services-list li{ font-size:13px; line-height:1.6; }
 
-  /* corner logo żeby nigdy nie wypychał szerokości */
-  .corner-logo{
-    width:36px;
-    position: fixed;
-    right:10px;
-    bottom:10px;
+  .about-text .underline {
+    width: 120px;
+    margin: 10px auto 24px;
+  }
+
+  .about-image {
+    display: none;
+  }
+
+  .about-text p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* =========================
+     MY WORK
+     kafelki ZOSTAJĄ
+     zmieniamy TYLKO pasek
+  ========================= */
+  .work-section .underline {
+    width: 120px;     /* KRÓTSZY PASEK */
+    margin: 8px auto 24px;
+  }
+
+  /* =========================
+     SERVICES
+     pełna szerokość
+  ========================= */
+  .services-section {
+    width: 100%;
+    padding: 24px 16px;
+  }
+
+  .services-title {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .services-section .underline {
+    width: 120px;
+    margin: 10px 0 24px 0;
+  }
+
+  .services-list {
+    padding-left: 16px;
+  }
+
+  .services-list li {
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  /* =========================
+     CORNER LOGO
+  ========================= */
+  .corner-logo {
+    width: 36px;
+    right: 10px;
+    bottom: 10px;
   }
 }
