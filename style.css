@@ -526,149 +526,120 @@ position: relative;   /* 🔴 KLUCZ */
 ========================= */
 @media (max-width: 768px) {
 
-  body { margin: 0; overflow-x: hidden; }
+  /* ---------- HARD RESET MOBILE ---------- */
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+  }
 
-  /* =========================
-     HEADER: logo lewo, menu prawo (jak na screenach)
-  ========================= */
-  header { position: relative; width: 100%; }
+  *, *::before, *::after {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  /* ---------- HEADER ---------- */
+  header {
+    width: 100%;
+  }
 
   .top-row {
-    display: block !important;
-    padding: 12px 14px 0 14px;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
   }
 
-  /* jeśli logo to <img> w top-row */
-  .top-row img {
-    height: 48px;
-    width: auto;
-    display: block;
-  }
-
-  /* menu po prawej u góry */
   .bottom-row-nav {
-    position: absolute !important;
-    top: 22px;
-    right: 14px;
-    display: flex !important;
+    display: flex;
+    justify-content: center;
     gap: 14px;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
+    padding: 8px 0 0 0;
+    position: static !important; /* zabija przesuwanie */
   }
 
   .bottom-row-nav a {
     font-size: 11px;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
     white-space: nowrap;
   }
 
-  /* =========================
-     HOME (screen 5)
-     RZĄD 1: TEXT | PHOTO
-     RZĄD 2: FORM (full width)
-  ========================= */
+  /* ---------- HOME (ZDJĘCIE + TEKST OBOK, FORM POD) ---------- */
+  .home-form {
+    width: 100%;
+    padding: 0 14px;
+  }
 
-  .home-form { padding: 0 14px; box-sizing: border-box; }
-
-  /* WYMUSZAMY UKŁAD JAK NA SCREENIE 5 */
-  .home-form .contact-container {
+  .contact-container {
     display: grid !important;
     grid-template-columns: 1fr 170px !important;
     grid-template-areas:
       "text photo"
-      "form form" !important;
-    column-gap: 16px !important;
-    row-gap: 18px !important;
-    align-items: start !important;
-    padding-top: 18px;
-    box-sizing: border-box;
+      "form form";
+    gap: 16px;
     width: 100%;
   }
 
-  /* zdjęcie po prawej */
-  .home-form .photo-section {
-    grid-area: photo !important;
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: flex-start !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .home-form .photo-section img {
-    width: 100% !important;
-    max-width: 170px !important;
-    height: auto !important;
-    display: block !important;
-  }
-
-  /* form-column zamieniamy na "przezroczysty" kontener,
-     żeby home-text i form stały się elementami grida */
-  .home-form .form-column {
+  .form-column {
     display: contents !important;
   }
 
-  /* tekst po lewej (obok zdjęcia) */
-  .home-form .home-text {
-    grid-area: text !important;
-    text-align: left !important;
-    align-self: start !important;
-    margin: 10px 0 0 0 !important;
-    padding: 0 !important;
+  .home-text {
+    grid-area: text;
+    text-align: left;
+    margin-top: 10px;
   }
 
-  .home-form .home-text h1 {
-    font-size: 16px !important;
-    line-height: 1.2 !important;
-    margin: 0 0 6px 0 !important;
+  .home-text h1 {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 6px;
   }
 
-  .home-form .home-text h2 {
-    font-size: 13px !important;
-    margin: 0 !important;
+  .home-text h2 {
+    font-size: 13px;
   }
 
-  /* formularz pod spodem, na środku */
-  .home-form form {
-    grid-area: form !important;
-    width: 100% !important;
-    max-width: 320px !important;
-    justify-self: center !important;
-    margin: 0 auto !important;
+  .photo-section {
+    grid-area: photo;
+    display: flex;
+    justify-content: flex-end;
   }
 
-  .home-form input,
-  .home-form textarea {
-    width: 100% !important;
-    box-sizing: border-box !important;
+  .photo-section img {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    display: block;
   }
 
-  .home-form button {
-    margin-top: 12px !important;
+  form {
+    grid-area: form;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
   }
 
-  /* stopka/ikonki w jednym rzędzie jak na screenie 5 */
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  button {
+    margin-top: 12px;
+  }
+
+  /* ---------- FOOTER ---------- */
   footer {
     width: 100%;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 14px !important;
-    padding: 18px 12px 16px 12px !important;
-    box-sizing: border-box;
-    flex-wrap: nowrap !important;
-    font-size: 11px !important;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 18px 12px;
+    font-size: 11px;
   }
 
-  footer img { height: 18px; width: auto; }
-
-  /* =========================
-     ABOUT (screen 6) – sam tekst, zdjęcie schowane
-  ========================= */
-
-  /* ustaw tekst na środku i ogranicz szerokość */
+  /* ---------- ABOUT (TYLKO TEKST) ---------- */
   .about-section,
   .about-container,
   .about-content {
@@ -676,86 +647,54 @@ position: relative;   /* 🔴 KLUCZ */
     max-width: 520px;
     margin: 0 auto;
     padding: 24px 16px;
-    box-sizing: border-box;
     text-align: center;
   }
 
-  /* chowamy zdjęcia w treści ABOUT (nie dotyka logo w header) */
-  main .about-section img,
-  main .about-container img,
-  main .about-content img {
+  .about-section img,
+  .about-container img,
+  .about-content img {
     display: none !important;
   }
 
-  .about-section p,
-  .about-container p,
-  .about-content p {
-    font-size: 13px !important;
-    line-height: 1.65 !important;
+  .about-section p {
+    font-size: 13px;
+    line-height: 1.6;
   }
 
-  /* =========================
-     MY WORK (screen 7) – 2 kolumny
-  ========================= */
-  .work-grid,
-  .projects-grid,
-  .mywork-grid {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 18px !important;
-    padding: 18px 16px 24px 16px !important;
-    box-sizing: border-box;
+  /* ---------- MY WORK (2 KAFELKI) ---------- */
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 18px 16px;
   }
 
-  /* jeśli jest nieparzysta ilość kafelków – ostatni na środku w pełnej szerokości */
-  .work-grid > :last-child:nth-child(odd),
-  .projects-grid > :last-child:nth-child(odd),
-  .mywork-grid > :last-child:nth-child(odd) {
-    grid-column: 1 / -1 !important;
-    justify-self: center !important;
+  .work-item img {
     width: 100%;
-    max-width: 260px;
+    height: auto;
   }
 
-  /* obrazki w kafelkach */
-  .work-item img,
-  .project-item img,
-  .mywork-item img {
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
+  .work-item p {
+    font-size: 11px;
+    line-height: 1.4;
   }
 
-  .work-item p,
-  .project-item p,
-  .mywork-item p {
-    font-size: 11px !important;
-    line-height: 1.35 !important;
-  }
-
-  /* =========================
-     SERVICES (screen 8) – lista po lewej
-  ========================= */
-  .services-section,
-  .services-container {
+  /* ---------- SERVICES ---------- */
+  .services-section {
     width: 100%;
     max-width: 520px;
     margin: 0 auto;
     padding: 24px 16px;
-    box-sizing: border-box;
     text-align: left;
   }
 
-  .services-section ul,
-  .services-container ul {
-    padding-left: 18px !important;
-    margin: 0 !important;
+  .services-section ul {
+    padding-left: 18px;
   }
 
-  .services-section li,
-  .services-container li {
-    font-size: 12.5px !important;
-    line-height: 1.55 !important;
-    margin-bottom: 14px !important;
+  .services-section li {
+    font-size: 12.5px;
+    line-height: 1.55;
+    margin-bottom: 14px;
   }
 }
