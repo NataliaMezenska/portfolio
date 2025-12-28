@@ -690,12 +690,22 @@ position: relative;   /* 🔴 KLUCZ */
 
   /* =========================
      MY WORK
-     kafelki ZOSTAJĄ
-     zmieniamy TYLKO pasek
   ========================= */
+      .work-section{ padding: 24px 16px; }
+  .work-title{ font-size:22px; text-align:center; }
+
+  .work-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+      .work-title {
+    font-size: 22px;
+  }
+
   .work-section .underline {
-    width: 120px;     /* KRÓTSZY PASEK */
-    margin: 8px auto 24px;
+    width: 140px;      /* skrócenie paska */
+    margin: 10px auto 24px auto;
   }
 
   /* =========================
@@ -736,3 +746,4 @@ position: relative;   /* 🔴 KLUCZ */
     bottom: 10px;
   }
 }
+
