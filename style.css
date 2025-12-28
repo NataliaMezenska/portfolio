@@ -692,9 +692,7 @@ position: relative;   /* 🔴 KLUCZ */
      MY WORK
   ========================= */
 .work-title{
-  font-size: 22px;
-  text-align: center;
-  display: inline-block;   /* KLUCZ */
+ font-size: 22px;
 }
 
 .work-section{
@@ -763,6 +761,7 @@ position: relative;   /* 🔴 KLUCZ */
     bottom: 10px;
   }
 }
+
 
 
 
