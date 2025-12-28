@@ -525,234 +525,129 @@ position: relative;   /* 🔴 KLUCZ */
    MOBILE VERSION
 ========================= */
 @media (max-width: 768px) {
+  html, body { margin: 0; width: 100%; overflow-x: hidden; }
+  * { box-sizing: border-box; }
+  img { max-width: 100%; height: auto; display: block; }
 
-  /* ---------- GLOBAL RESET ---------- */
-  html, body {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    overflow-x: hidden;
-  }
-
-  *, *::before, *::after {
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* ==================================================
-     HEADER (jak na zdjęciach 5–8)
-     logo LEWO + menu obok, bez scrolla poziomego
-  ================================================== */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  /* HEADER: logo lewo, menu obok siebie (jak screen 5) */
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
     padding: 10px 14px;
-    width: 100%;
+    width:100%;
+  }
+  .top-row{ display:flex; align-items:center; }
+  .logo{ height:42px; width:auto; }
+
+  nav.bottom-row.nav{
+    display:flex;
+    gap:12px;
+    align-items:center;
+  }
+  nav.bottom-row.nav a{
+    font-size:11px;
+    letter-spacing:.6px;
+    white-space:nowrap;
   }
 
-  .top-row {
-    display: flex;
-    align-items: center;
-  }
+  /* INDEX: tekst po LEWEJ + zdjęcie po PRAWEJ, form pod spodem */
+  .home-form{ padding: 0 14px; }
 
-  .top-row .logo {
-    height: 42px;
-    width: auto;
-  }
-
-  nav.bottom-row {
-    display: flex;
-    gap: 14px;
-    align-items: center;
-    position: static;
-  }
-
-  nav.bottom-row a {
-    font-size: 11px;
-    white-space: nowrap;
-    letter-spacing: 0.8px;
-  }
-
-  /* ==================================================
-     INDEX / HOME (ZDJĘCIE + TEKST OBOK, FORM POD)
-     → zdjęcie PRAWO, tekst LEWO (jak zdjęcie 5)
-  ================================================== */
-  .home-form {
-    width: 100%;
-    padding: 0 14px;
-  }
-
-  .contact-container {
-    display: grid;
-    grid-template-columns: 1fr 170px;
+  .contact-container{
+    display:grid;
+    grid-template-columns: 1fr 160px;
     grid-template-areas:
       "text photo"
       "form form";
-    gap: 16px;
-    width: 100%;
+    gap:16px;
+    width:100%;
   }
 
-  .photo-section {
-    grid-area: photo;
-    display: flex;
-    justify-content: flex-end;
-  }
+  .photo-section{ grid-area: photo; display:flex; justify-content:flex-end; }
+  .portrait{ max-width:160px; border-radius:12px; }
 
-  .photo-section img {
-    max-width: 170px;
-    border-radius: 12px;
-  }
+  .form-column{ display: contents; }
 
-  .form-column {
-    display: contents;
-  }
+  .home-text{ grid-area: text; text-align:left; margin-top:10px; }
+  .home-text h1{ font-size:16px; margin:0 0 6px 0; line-height:1.2; }
+  .home-text h2{ font-size:13px; margin:0; }
 
-  .home-text {
-    grid-area: text;
-    margin-top: 10px;
-    text-align: left;
-  }
-
-  .home-text h1 {
-    font-size: 16px;
-    line-height: 1.2;
-    margin-bottom: 6px;
-  }
-
-  .home-text h2 {
-    font-size: 13px;
-  }
-
-  form {
+  form.form-box{
     grid-area: form;
-    width: 100%;
-    max-width: 320px;
+    width:100%;
+    max-width:320px;
     margin: 0 auto;
   }
+  .form-input{ width:100%; }
 
-  .form-input {
-    width: 100%;
-  }
-
-  .submit-btn {
-    margin-top: 12px;
-  }
-
-  /* social icons – NA SAMYM DOLE indexu */
-  .social-wrapper {
+  /* SOCIALE: NA DOLE i BEZ PRZESUWANIA W BOK */
+  .social-wrapper{
     margin-top: 40px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    font-size: 11px;
+    padding: 18px 0 22px 0;
+    display:flex;
+    justify-content:center;
+    gap: 18px;
+    width:100%;
   }
 
-  .social-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  .social-item a{
+    display:flex;
+    align-items:center;
+    gap: 8px;
   }
 
-  .social-icon {
-    width: 18px;
-    height: auto;
+  .social-icon{ width:18px; height:auto; }
+
+  /* NA TELEFONIE ukrywamy długie napisy (żeby było jak na screen 5 i żeby nie pływało) */
+  .social-item span{
+    display:none;
   }
 
-  /* ==================================================
-     ABOUT (zdjęcie UKRYTE, tekst NA ŚRODKU)
-     → zdjęcie 6
-  ================================================== */
-  .about-section {
-    display: block;
+  /* ABOUT: tekst na środku, tytuł mniejszy */
+  .about-section{
+    padding: 24px 16px;
     max-width: 420px;
     margin: 0 auto;
-    padding: 24px 16px;
-    text-align: center;
+    text-align:center;
   }
+  .about-text h1{ font-size:22px; }
+  .about-image{ display:none; }
+  .about-text p{ font-size:13px; line-height:1.6; }
 
-  .about-section h1 {
-    font-size: 22px;
-    margin-bottom: 16px;
-  }
+  /* WORK: 2 większe kafelki + sensowny tekst */
+  .work-section{ padding: 24px 16px; }
+  .work-title{ font-size:22px; text-align:center; }
 
-  .about-image {
-    display: none;
-  }
-
-  .about-text p {
-    font-size: 13px;
-    line-height: 1.6;
-    text-align: center;
-  }
-
-  /* ==================================================
-     MY WORK (2 WIĘKSZE KAFELKI W RZĘDZIE)
-     → zdjęcie 7
-  ================================================== */
-  .work-section {
-    padding: 24px 16px;
-  }
-
-  .work-title {
-    font-size: 22px;
-    margin-bottom: 16px;
-    text-align: center;
-  }
-
-  .work-grid {
-    display: grid;
+  .work-grid{
+    display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
   }
-
-  .work-item {
-    font-size: 13px;
-    text-align: center;
+  .work-item img{ width:100%; height:auto; }
+  .work-item p{
+    font-size:12px;
+    line-height:1.35;
+    margin: 8px 0;
+    text-align:center;
+    /* to sprawia, że tekst łamie się normalnie, a nie po 1 słowie */
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 
-  .work-item p {
-    line-height: 1.4;
-  }
-
-  /* ==================================================
-     SERVICES (tekst na CAŁĄ szerokość)
-     → zdjęcie 8
-  ================================================== */
-  .services-section {
-    width: 100%;
+  /* SERVICES: szeroko, tytuł mniejszy */
+  .services-section{
     padding: 24px 18px;
+    width:100%;
   }
+  .services-title{ font-size:22px; }
+  .services-list li{ font-size:13px; line-height:1.6; }
 
-  .services-title {
-    font-size: 22px;
-    margin-bottom: 20px;
-    text-align: left;
-  }
-
-  .services-list {
-    padding-left: 16px;
-  }
-
-  .services-list li {
-    font-size: 13px;
-    line-height: 1.6;
-    margin-bottom: 14px;
-  }
-
-  /* ==================================================
-     CORNER LOGO – NIE WYCHODZI POZA EKRAN
-  ================================================== */
-  .corner-logo {
-    width: 36px;
-    bottom: 10px;
-    right: 10px;
+  /* corner logo żeby nigdy nie wypychał szerokości */
+  .corner-logo{
+    width:36px;
+    position: fixed;
+    right:10px;
+    bottom:10px;
   }
 }
