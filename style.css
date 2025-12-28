@@ -691,7 +691,7 @@ position: relative;   /* 🔴 KLUCZ */
   /* =========================
      MY WORK
   ========================= */
-      .work-section{ padding: 24px 16px; }
+ .work-section{ padding: 24px 16px; }
   .work-title{ font-size:22px; text-align:center; }
 
   .work-grid{
@@ -699,13 +699,15 @@ position: relative;   /* 🔴 KLUCZ */
     grid-template-columns: 1fr 1fr;
     gap: 14px;
   }
-      .work-title {
-    font-size: 22px;
-  }
-
-  .work-section .underline {
-    width: 140px;      /* skrócenie paska */
-    margin: 10px auto 24px auto;
+  .work-item img{ width:100%; height:auto; }
+  .work-item p{
+    font-size:12px;
+    line-height:1.35;
+    margin: 8px 0;
+    text-align:center;
+    /* to sprawia, że tekst łamie się normalnie, a nie po 1 słowie */
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 
   /* =========================
@@ -746,4 +748,5 @@ position: relative;   /* 🔴 KLUCZ */
     bottom: 10px;
   }
 }
+
 
