@@ -526,7 +526,7 @@ position: relative;   /* 🔴 KLUCZ */
 ========================= */
 @media (max-width: 768px) {
 
-  /* ---------- HARD RESET MOBILE ---------- */
+  /* ---------- HARD RESET ---------- */
   html, body {
     width: 100%;
     max-width: 100%;
@@ -539,32 +539,51 @@ position: relative;   /* 🔴 KLUCZ */
     max-width: 100%;
   }
 
-  /* ---------- HEADER ---------- */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ---------- HEADER ----------
+     logo lewo + menu obok (bez przesuwania)
+  -------------------------------- */
   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
     width: 100%;
   }
 
   .top-row {
     display: flex;
-    justify-content: center;
-    padding-top: 10px;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .top-row img {
+    height: 40px;
+    width: auto;
   }
 
   .bottom-row-nav {
     display: flex;
-    justify-content: center;
-    gap: 14px;
-    padding: 8px 0 0 0;
-    position: static !important; /* zabija przesuwanie */
+    flex-direction: row;
+    gap: 12px;
+    padding: 0;
+    position: static !important;
   }
 
   .bottom-row-nav a {
     font-size: 11px;
-    letter-spacing: 1px;
     white-space: nowrap;
+    letter-spacing: 0.8px;
   }
 
-  /* ---------- HOME (ZDJĘCIE + TEKST OBOK, FORM POD) ---------- */
+  /* ---------- HOME / INDEX ----------
+     tekst + zdjęcie obok, formularz pod spodem
+  ---------------------------------- */
   .home-form {
     width: 100%;
     padding: 0 14px;
@@ -607,10 +626,8 @@ position: relative;   /* 🔴 KLUCZ */
   }
 
   .photo-section img {
-    width: 100%;
     max-width: 170px;
-    height: auto;
-    display: block;
+    border-radius: 12px;
   }
 
   form {
@@ -629,72 +646,91 @@ position: relative;   /* 🔴 KLUCZ */
     margin-top: 12px;
   }
 
-  /* ---------- FOOTER ---------- */
+  /* ---------- FOOTER ----------
+     ikonki na samym dole
+  -------------------------------- */
   footer {
-    width: 100%;
+    margin-top: 40px;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     gap: 14px;
-    padding: 18px 12px;
     font-size: 11px;
   }
 
-  /* ---------- ABOUT (TYLKO TEKST) ---------- */
-  .about-section,
-  .about-container,
-  .about-content {
-    width: 100%;
-    max-width: 520px;
+  /* ---------- ABOUT ME ----------
+     tekst na środku, mniejszy tytuł
+  -------------------------------- */
+  .about-section {
+    max-width: 420px;
     margin: 0 auto;
     padding: 24px 16px;
     text-align: center;
   }
 
-  .about-section img,
-  .about-container img,
-  .about-content img {
+  .about-section h1,
+  .about-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .about-section img {
     display: none !important;
   }
 
   .about-section p {
     font-size: 13px;
     line-height: 1.6;
+    text-align: center;
   }
 
-  /* ---------- MY WORK (2 KAFELKI) ---------- */
+  /* ---------- MY WORK ----------
+     2 większe kafelki + mniejszy tytuł
+  -------------------------------- */
+  .work-section h1,
+  .work-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
   .work-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 14px;
     padding: 18px 16px;
   }
 
-  .work-item img {
-    width: 100%;
-    height: auto;
+  .work-item {
+    font-size: 13px;
+    text-align: center;
   }
 
   .work-item p {
-    font-size: 11px;
     line-height: 1.4;
   }
 
-  /* ---------- SERVICES ---------- */
+  /* ---------- SERVICES ----------
+     tekst na całą szerokość + mniejszy tytuł
+  -------------------------------- */
   .services-section {
     width: 100%;
-    max-width: 520px;
-    margin: 0 auto;
-    padding: 24px 16px;
+    padding: 24px 18px;
     text-align: left;
   }
 
+  .services-section h1,
+  .services-section h2 {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
   .services-section ul {
-    padding-left: 18px;
+    padding-left: 16px;
   }
 
   .services-section li {
-    font-size: 12.5px;
-    line-height: 1.55;
+    font-size: 13px;
+    line-height: 1.6;
     margin-bottom: 14px;
   }
 }
