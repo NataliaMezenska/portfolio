@@ -692,6 +692,11 @@ position: relative;   /* 🔴 KLUCZ */
      MY WORK
   ========================= */
  .work-section{ padding: 24px 16px; }
+     
+    .work-section .underline {
+    width: 90px;
+    margin: 8px auto 24px;
+  }
   .work-title{ font-size:22px; text-align:center; }
 
   .work-grid{
@@ -748,5 +753,6 @@ position: relative;   /* 🔴 KLUCZ */
     bottom: 10px;
   }
 }
+
 
 
