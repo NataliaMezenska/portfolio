@@ -526,12 +526,12 @@ position: relative;   /* 🔴 KLUCZ */
 ========================= */
 @media (max-width: 768px) {
 
-  /* ---------- HARD RESET ---------- */
+  /* ---------- GLOBAL RESET ---------- */
   html, body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
     margin: 0;
+    overflow-x: hidden;
   }
 
   *, *::before, *::after {
@@ -545,9 +545,10 @@ position: relative;   /* 🔴 KLUCZ */
     display: block;
   }
 
-  /* ---------- HEADER ----------
-     logo lewo + menu obok (bez przesuwania)
-  -------------------------------- */
+  /* ==================================================
+     HEADER (jak na zdjęciach 5–8)
+     logo LEWO + menu obok, bez scrolla poziomego
+  ================================================== */
   header {
     display: flex;
     align-items: center;
@@ -558,65 +559,44 @@ position: relative;   /* 🔴 KLUCZ */
 
   .top-row {
     display: flex;
-    justify-content: flex-start;
-    padding: 0;
+    align-items: center;
   }
 
-  .top-row img {
-    height: 40px;
+  .top-row .logo {
+    height: 42px;
     width: auto;
   }
 
-  .bottom-row-nav {
+  nav.bottom-row {
     display: flex;
-    flex-direction: row;
-    gap: 12px;
-    padding: 0;
-    position: static !important;
+    gap: 14px;
+    align-items: center;
+    position: static;
   }
 
-  .bottom-row-nav a {
+  nav.bottom-row a {
     font-size: 11px;
     white-space: nowrap;
     letter-spacing: 0.8px;
   }
 
-  /* ---------- HOME / INDEX ----------
-     tekst + zdjęcie obok, formularz pod spodem
-  ---------------------------------- */
+  /* ==================================================
+     INDEX / HOME (ZDJĘCIE + TEKST OBOK, FORM POD)
+     → zdjęcie PRAWO, tekst LEWO (jak zdjęcie 5)
+  ================================================== */
   .home-form {
     width: 100%;
     padding: 0 14px;
   }
 
   .contact-container {
-    display: grid !important;
-    grid-template-columns: 1fr 170px !important;
+    display: grid;
+    grid-template-columns: 1fr 170px;
     grid-template-areas:
       "text photo"
       "form form";
     gap: 16px;
     width: 100%;
-  }
-
-  .form-column {
-    display: contents !important;
-  }
-
-  .home-text {
-    grid-area: text;
-    text-align: left;
-    margin-top: 10px;
-  }
-
-  .home-text h1 {
-    font-size: 16px;
-    line-height: 1.2;
-    margin-bottom: 6px;
-  }
-
-  .home-text h2 {
-    font-size: 13px;
   }
 
   .photo-section {
@@ -630,6 +610,26 @@ position: relative;   /* 🔴 KLUCZ */
     border-radius: 12px;
   }
 
+  .form-column {
+    display: contents;
+  }
+
+  .home-text {
+    grid-area: text;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .home-text h1 {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .home-text h2 {
+    font-size: 13px;
+  }
+
   form {
     grid-area: form;
     width: 100%;
@@ -637,67 +637,80 @@ position: relative;   /* 🔴 KLUCZ */
     margin: 0 auto;
   }
 
-  input,
-  textarea {
+  .form-input {
     width: 100%;
   }
 
-  button {
+  .submit-btn {
     margin-top: 12px;
   }
 
-  /* ---------- FOOTER ----------
-     ikonki na samym dole
-  -------------------------------- */
-  footer {
+  /* social icons – NA SAMYM DOLE indexu */
+  .social-wrapper {
     margin-top: 40px;
-    padding: 20px 0;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center;
-    gap: 14px;
+    gap: 16px;
     font-size: 11px;
   }
 
-  /* ---------- ABOUT ME ----------
-     tekst na środku, mniejszy tytuł
-  -------------------------------- */
+  .social-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .social-icon {
+    width: 18px;
+    height: auto;
+  }
+
+  /* ==================================================
+     ABOUT (zdjęcie UKRYTE, tekst NA ŚRODKU)
+     → zdjęcie 6
+  ================================================== */
   .about-section {
+    display: block;
     max-width: 420px;
     margin: 0 auto;
     padding: 24px 16px;
     text-align: center;
   }
 
-  .about-section h1,
-  .about-section h2 {
+  .about-section h1 {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
-  .about-section img {
-    display: none !important;
+  .about-image {
+    display: none;
   }
 
-  .about-section p {
+  .about-text p {
     font-size: 13px;
     line-height: 1.6;
     text-align: center;
   }
 
-  /* ---------- MY WORK ----------
-     2 większe kafelki + mniejszy tytuł
-  -------------------------------- */
-  .work-section h1,
-  .work-section h2 {
+  /* ==================================================
+     MY WORK (2 WIĘKSZE KAFELKI W RZĘDZIE)
+     → zdjęcie 7
+  ================================================== */
+  .work-section {
+    padding: 24px 16px;
+  }
+
+  .work-title {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    text-align: center;
   }
 
   .work-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
-    padding: 18px 16px;
   }
 
   .work-item {
@@ -709,28 +722,37 @@ position: relative;   /* 🔴 KLUCZ */
     line-height: 1.4;
   }
 
-  /* ---------- SERVICES ----------
-     tekst na całą szerokość + mniejszy tytuł
-  -------------------------------- */
+  /* ==================================================
+     SERVICES (tekst na CAŁĄ szerokość)
+     → zdjęcie 8
+  ================================================== */
   .services-section {
     width: 100%;
     padding: 24px 18px;
+  }
+
+  .services-title {
+    font-size: 22px;
+    margin-bottom: 20px;
     text-align: left;
   }
 
-  .services-section h1,
-  .services-section h2 {
-    font-size: 22px;
-    margin-bottom: 24px;
-  }
-
-  .services-section ul {
+  .services-list {
     padding-left: 16px;
   }
 
-  .services-section li {
+  .services-list li {
     font-size: 13px;
     line-height: 1.6;
     margin-bottom: 14px;
+  }
+
+  /* ==================================================
+     CORNER LOGO – NIE WYCHODZI POZA EKRAN
+  ================================================== */
+  .corner-logo {
+    width: 36px;
+    bottom: 10px;
+    right: 10px;
   }
 }
