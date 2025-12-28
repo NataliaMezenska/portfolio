@@ -698,12 +698,15 @@ position: relative;   /* 🔴 KLUCZ */
 }
 
 .work-section{
-  text-align: center;      /* centrowanie całości */
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    text-align: center;      /* centrowanie całości */
 }
 
 .work-section .underline{
-  width: 100%;             /* = szerokość tekstu */
-  margin: 6px auto 24px;
+    width: 120px;
+    margin: 10px auto 24px;
 }
 
   .work-grid{
@@ -760,6 +763,7 @@ position: relative;   /* 🔴 KLUCZ */
     bottom: 10px;
   }
 }
+
 
 
 
