@@ -632,7 +632,7 @@ nav.bottom-row {
   max-width: 180px;   /* ⬅️ ładne DWIE linie */
   margin-bottom: 4px;
   margin-left: 0;
-      color: #000000;
+ color: lime !important;
   }
 
   .home-text h2 { 
@@ -640,7 +640,7 @@ font-size: 10px;
   font-weight: 600;
   margin: 0;     
         margin-left: 0;
-      color: #000000;
+color: lime !important;
   }
 
   .photo-section {
@@ -788,6 +788,7 @@ font-size: 10px;
     bottom: 10px;
   }
 }
+
 
 
 
