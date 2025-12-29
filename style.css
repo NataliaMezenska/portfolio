@@ -740,11 +740,15 @@ color: #ebb3ba !important;
   box-sizing: border-box;
 }
 
-.work-title {
+    .work-title {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 22px;
   font-weight: 600;
   text-align: center;
 }
+
 
 .work-section .underline {
   width: 120px;
@@ -815,6 +819,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
