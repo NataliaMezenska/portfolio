@@ -589,6 +589,8 @@ nav.bottom-row {
     font-size: 11px;
   letter-spacing: 0.6px;
   white-space: nowrap;
+        margin: 0;              /* ← USUWA stare odstępy */
+  padding: 0 2px;         /* ← delikatna kontrola odstępu */
   }
 
   /* =========================
@@ -772,6 +774,7 @@ nav.bottom-row {
     bottom: 10px;
   }
 }
+
 
 
 
