@@ -778,8 +778,9 @@ color: #ebb3ba !important;
   ========================= */
  .services-section {
     width: 100%;
-    padding: 24px 0;
-  }
+ padding-top: 40px;   /* 👈 zwiększ / zmniejsz */
+  padding-bottom: 24px;
+ }
 
   .services-title,
   .services-list,
@@ -820,6 +821,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
