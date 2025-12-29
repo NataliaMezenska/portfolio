@@ -743,11 +743,11 @@ color: #ebb3ba !important;
 .work-title {
   font-size: 22px;
   font-weight: 600;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
   text-align: center;
+  margin: 0;
+
+  /* 🔥 TO JEST KLUCZ */
+  letter-spacing: normal;
 }
 
 .work-section .underline {
@@ -809,6 +809,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
