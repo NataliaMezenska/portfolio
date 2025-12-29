@@ -738,15 +738,16 @@ color: #ebb3ba !important;
   padding: 24px 16px;
   text-align: center;
   box-sizing: border-box;
+    position: relative;
 }
 
 .work-title {
-  position: relative;
-  left: 50%;
+  position: absolute;
+  left: 50vw;
   transform: translateX(-50%);
   width: max-content;
+  font-size: 22px;
   margin: 0;
-     font-size: 22px;
 }
 
 
@@ -819,6 +820,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
