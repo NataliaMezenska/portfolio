@@ -744,12 +744,14 @@ color: #ebb3ba !important;
   font-weight: 600;
   text-align: left;
   margin: 0;
+  margin-left: -12px;
 }
 
 
 .work-section .underline {
   width: 120px;
   margin: 8px 0 24px;
+  margin-left: -12px;
 }
 
   .work-grid{
@@ -816,6 +818,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
