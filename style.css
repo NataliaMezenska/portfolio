@@ -738,15 +738,14 @@ color: #ebb3ba !important;
   padding: 24px 16px;
   text-align: center;
   box-sizing: border-box;
-
 }
 
 .work-title {
-  position: absolute;
-  left: 50vw;
+  position: relative;
+  left: 50%;
   transform: translateX(-50%);
   width: max-content;
-  font-size: 22px;
+  margin: 0;
 }
 
 
@@ -819,6 +818,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
