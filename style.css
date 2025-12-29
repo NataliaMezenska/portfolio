@@ -560,25 +560,26 @@ position: relative;   /* 🔴 KLUCZ */
   /* =========================
      HEADER
   ========================= */
-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start; 
-  gap: 30px;                   /* ⬅️ odstęp logo–menu */
-    padding-left: 5px;   /* ⬅️ LOGO ↔ LEWA KRAWĘDŹ */
-  padding-right: 5px;  /* ⬅️ MENU ↔ PRAWA KRAWĘDŹ */
-     outline: 2px solid lime;
+header{
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-start;
+  gap: 10px;
+
+  box-sizing: border-box;     /* ⭐ ważne */
+  padding: 10px 14px;         /* ⭐ odstęp od krawędzi */
 }
 
-  .top-row {
-    flex: 0 0 auto;
-  }
+.top-row{
+  padding-left: 0;            /* na wszelki */
+}
 
-  .top-row .logo {
-    height: 42px;
-    width: auto;
-    display: block;
-  }
+.top-row .logo{
+  margin-left: 0;             /* na wszelki */
+  display:block;
+  height:42px;
+  width:auto;
+}
 
 nav.bottom-row {
   display: flex;
@@ -778,6 +779,7 @@ nav.bottom-row {
     bottom: 10px;
   }
 }
+
 
 
 
