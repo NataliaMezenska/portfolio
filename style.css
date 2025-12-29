@@ -735,6 +735,7 @@ color: #ebb3ba !important;
   ========================= */
 .work-title{
  font-size: 22px;
+    text-align: center;
 }
 
 .work-section{
@@ -803,6 +804,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
