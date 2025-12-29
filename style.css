@@ -742,8 +742,11 @@ color: #ebb3ba !important;
 
 .work-title {
   font-size: 22px;
-  display: inline-block;   /* szerokość = tekst */
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
   margin: 0 auto;
+  letter-spacing: normal; /* KLUCZOWE */
 }
 
 .work-section .underline {
@@ -805,6 +808,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
