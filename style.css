@@ -733,12 +733,11 @@ color: #ebb3ba !important;
   /* =========================
      MY WORK
   ========================= */
-.work-title{
-  display: block;
-  width: 100%;
-  margin: 0 auto;
+.work-title {
+  font-size: 22px;
   text-align: center;
-     font-size: 22px !important;
+  margin: 0;
+  display: inline-block;
 }
 
 .work-section{
@@ -807,6 +806,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
