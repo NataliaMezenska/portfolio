@@ -733,25 +733,22 @@ color: #ebb3ba !important;
   /* =========================
      MY WORK
   ========================= */
+.work-section {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  text-align: center;
+}
+
 .work-title {
   font-size: 22px;
-  width: 100vw;              /* ⬅️ CAŁA SZEROKOŚĆ EKRANU */
-  margin-left: calc(-50vw + 50%); /* ⬅️ WYJMUJE Z PADDINGU */
-  text-align: center;
-  display: block;
-     background: yellow !important;
+  display: inline-block;   /* szerokość = tekst */
+  margin: 0 auto;
 }
 
-.work-section{
-    max-width: 420px;
-    margin: 0 auto;
-    padding: 24px 16px;
-    text-align: center;      /* centrowanie całości */
-}
-
-.work-section .underline{
-    width: 120px;
-    margin: 10px auto 24px;
+.work-section .underline {
+  width: 120px;
+  margin: 10px auto 24px;
 }
 
   .work-grid{
@@ -808,6 +805,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
