@@ -562,10 +562,9 @@ position: relative;   /* 🔴 KLUCZ */
   ========================= */
 header {
   display: flex;
-  align-items: flex-end;      /* menu na wysokości dołu logo */
-  justify-content: space-between;
-  padding: 10px 14px;
-  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-start; 
+  gap: 10px;                   /* ⬅️ odstęp logo–menu */
 }
 
   .top-row {
@@ -580,9 +579,11 @@ header {
 
 nav.bottom-row {
   display: flex;
-  align-items: flex-end;      /* menu niżej */
-  gap: 2px;                  /* mniejsze odstępy między zakładkami */
-  padding-bottom: 2px;        /* idealne wyrównanie z logo */
+  align-items: flex-end;
+  justify-content: flex-end;  
+  width: auto;                 
+  gap: 6px;                   
+  padding-bottom: 2px;
 }
 
   nav.bottom-row a {
@@ -774,6 +775,7 @@ nav.bottom-row {
     bottom: 10px;
   }
 }
+
 
 
 
