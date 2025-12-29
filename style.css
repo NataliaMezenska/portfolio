@@ -615,6 +615,7 @@ nav.bottom-row {
       "text photo"
       "form form";
     gap: 16px;
+       padding-left: 12px;   /* ⬅️ TO JEST ODSTĘP TEKSTU OD KRAWĘDZI */
   }
 
   .home-text {
@@ -787,6 +788,7 @@ font-size: 13px;
     bottom: 10px;
   }
 }
+
 
 
 
