@@ -629,6 +629,7 @@ nav.bottom-row {
   font-weight: 500;
   max-width: 180px;   /* ⬅️ ładne DWIE linie */
   margin-bottom: 4px;
+       margin-left: 10px;
       color: #000000;
   }
 
@@ -636,6 +637,7 @@ nav.bottom-row {
 font-size: 13px;
   font-weight: 400;
   margin: 0;      
+       margin-left: 15px;
       color: #000000;
   }
 
@@ -784,6 +786,7 @@ font-size: 13px;
     bottom: 10px;
   }
 }
+
 
 
 
