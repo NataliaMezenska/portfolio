@@ -626,7 +626,7 @@ nav.bottom-row {
   }
 
   .home-text h1 {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.25;
   font-weight: 500;
   max-width: 180px;   /* ⬅️ ładne DWIE linie */
@@ -636,7 +636,7 @@ nav.bottom-row {
   }
 
   .home-text h2 { 
-font-size: 13px;
+font-size: 10px;
   font-weight: 400;
   margin: 0;     
         margin-left: 0;
@@ -788,6 +788,7 @@ font-size: 13px;
     bottom: 10px;
   }
 }
+
 
 
 
