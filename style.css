@@ -738,7 +738,7 @@ color: #ebb3ba !important;
   padding: 24px 16px;
   text-align: center;
   box-sizing: border-box;
-    position: relative;
+
 }
 
 .work-title {
@@ -747,7 +747,6 @@ color: #ebb3ba !important;
   transform: translateX(-50%);
   width: max-content;
   font-size: 22px;
-  margin: 0;
 }
 
 
@@ -820,6 +819,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
