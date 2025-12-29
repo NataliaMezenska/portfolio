@@ -739,25 +739,19 @@ color: #ebb3ba !important;
   box-sizing: border-box;
 }
 
-.work-title {
+.work-section .work-title {
   font-size: 22px;
   font-weight: 600;
-  text-align: left;
-  margin: 0;
-  margin-left: -12px;
+  text-align: center !important;
+  margin: 0 auto !important;
 }
 
 
 .work-section .underline {
   width: 120px;
-  margin: 8px 0 24px;
+  margin: 8px auto 24px;
 }
 
-    .work-section .work-title {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  text-align: left !important;
-}
     
   .work-grid{
     display: grid;
@@ -823,6 +817,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
