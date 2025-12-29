@@ -784,6 +784,7 @@ color: #ebb3ba !important;
   .services-title {
     text-align: center;
     margin: 0 auto;
+       font-size: 22px;
   }
 
   .services-section .underline {
@@ -813,6 +814,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
