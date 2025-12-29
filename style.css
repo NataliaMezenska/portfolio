@@ -735,9 +735,10 @@ color: #ebb3ba !important;
   ========================= */
 .work-title {
   font-size: 22px;
+  width: 100vw;              /* ⬅️ CAŁA SZEROKOŚĆ EKRANU */
+  margin-left: calc(-50vw + 50%); /* ⬅️ WYJMUJE Z PADDINGU */
   text-align: center;
-  margin: 0 ;
-   display: block;
+  display: block;
 }
 
 .work-section{
@@ -806,6 +807,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
