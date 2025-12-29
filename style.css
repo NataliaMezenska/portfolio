@@ -776,32 +776,38 @@ color: #ebb3ba !important;
      SERVICES
      pełna szerokość
   ========================= */
-  .services-section {
-    padding: 32px 16px;
-    text-align: center;
+ .services-section {
+    width: 100%;
+    padding: 24px 0;
+  }
+
+  .services-title,
+  .services-list,
+  .services-section .underline {
+    max-width: 320px;
+    margin-left: 24px;
+    margin-right: auto;
   }
 
   .services-title {
-    text-align: center;
-    margin: 0 auto;
-       font-size: 22px;
+    text-align: left;
+    font-size: 22px;
   }
 
   .services-section .underline {
-    margin: 10px auto 24px;
+    width: 120px;
+    margin-top: 8px;
+    margin-bottom: 24px;
   }
 
   .services-list {
-    padding: 0;
-    margin: 0 auto;
-    list-style-position: inside;
+    padding-left: 0;
   }
 
   .services-list li {
-    text-align: center;
     font-size: 13px;
     line-height: 1.6;
-    margin-bottom: 20px;
+    text-align: left;
   }
 }
 
@@ -814,6 +820,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
