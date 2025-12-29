@@ -564,7 +564,7 @@ header{
   display:flex;
   align-items:flex-end;
   justify-content:flex-start;
-  gap: 10px;
+  gap: 14px;  /* odstęp logo od krawędzi*/
 
   box-sizing: border-box;     /* ⭐ ważne */
   padding: 10px 14px;         /* ⭐ odstęp od krawędzi */
@@ -578,7 +578,7 @@ header{
 .top-row .logo{
   margin-left: 0;             /* na wszelki */
   display:block;
-  height:42px;
+  height:55px;
   width:auto;
 }
 
@@ -780,6 +780,7 @@ nav.bottom-row {
     bottom: 10px;
   }
 }
+
 
 
 
