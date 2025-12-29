@@ -736,23 +736,20 @@ color: #ebb3ba !important;
 .work-section {
   width: 100%;
   padding: 24px 16px;
-  text-align: center;
   box-sizing: border-box;
 }
 
 .work-title {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
   margin: 0;
-     font-size: 22px;
 }
 
 
 .work-section .underline {
   width: 120px;
-  margin: 10px auto 24px;
+  margin: 8px 0 24px;
 }
 
   .work-grid{
@@ -819,6 +816,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
