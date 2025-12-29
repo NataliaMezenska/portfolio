@@ -621,6 +621,7 @@ nav.bottom-row {
     grid-area: text;
     text-align: left;
     margin-top: 10px;
+        padding-left: 10px;   /* ⬅️ odstęp tekstu od krawędzi */
   }
 
   .home-text h1 {
@@ -629,15 +630,13 @@ nav.bottom-row {
   font-weight: 500;
   max-width: 180px;   /* ⬅️ ładne DWIE linie */
   margin-bottom: 4px;
-       margin-left: 10px;
       color: #000000;
   }
 
   .home-text h2 { 
 font-size: 13px;
   font-weight: 400;
-  margin: 0;      
-       margin-left: 15px;
+  margin: 0;     
       color: #000000;
   }
 
@@ -786,6 +785,7 @@ font-size: 13px;
     bottom: 10px;
   }
 }
+
 
 
 
