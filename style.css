@@ -581,7 +581,7 @@ header {
 nav.bottom-row {
   display: flex;
   align-items: flex-end;      /* menu niżej */
-  gap: 10px;                  /* mniejsze odstępy między zakładkami */
+  gap: 2px;                  /* mniejsze odstępy między zakładkami */
   padding-bottom: 2px;        /* idealne wyrównanie z logo */
 }
 
@@ -772,6 +772,7 @@ nav.bottom-row {
     bottom: 10px;
   }
 }
+
 
 
 
