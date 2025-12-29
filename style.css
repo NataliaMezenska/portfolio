@@ -567,6 +567,7 @@ header {
   gap: 30px;                   /* ⬅️ odstęp logo–menu */
     padding-left: 5px;   /* ⬅️ LOGO ↔ LEWA KRAWĘDŹ */
   padding-right: 5px;  /* ⬅️ MENU ↔ PRAWA KRAWĘDŹ */
+     outline: 2px solid lime;
 }
 
   .top-row {
@@ -777,6 +778,7 @@ nav.bottom-row {
     bottom: 10px;
   }
 }
+
 
 
 
