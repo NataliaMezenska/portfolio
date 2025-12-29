@@ -568,6 +568,7 @@ header{
 
   box-sizing: border-box;     /* ⭐ ważne */
   padding: 10px 14px;         /* ⭐ odstęp od krawędzi */
+    outline: 2px solid lime
 }
 
 .top-row{
@@ -779,6 +780,7 @@ nav.bottom-row {
     bottom: 10px;
   }
 }
+
 
 
 
