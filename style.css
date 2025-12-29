@@ -776,23 +776,32 @@ color: #ebb3ba !important;
      SERVICES
      pełna szerokość
   ========================= */
-  .services-section {
+ .services-section {
     width: 100%;
-    padding: 24px 16px;
+    padding: 24px 0;
+  }
+
+  .services-title,
+  .services-list,
+  .services-section .underline {
+    max-width: 320px;
+    margin-left: 24px;
+    margin-right: auto;
   }
 
   .services-title {
-    font-size: 22px;
     text-align: left;
+    font-size: 22px;
   }
 
   .services-section .underline {
     width: 120px;
-    margin: 10px 0 24px 0;
+    margin-top: 8px;
+    margin-bottom: 24px;
   }
 
   .services-list {
-    padding-left: 16px;
+    padding-left: 0;
   }
 
   .services-list li {
@@ -800,6 +809,7 @@ color: #ebb3ba !important;
     line-height: 1.6;
     text-align: left;
   }
+}
 
   /* =========================
      CORNER LOGO
@@ -810,6 +820,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
