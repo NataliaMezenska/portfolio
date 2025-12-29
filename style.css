@@ -735,7 +735,7 @@ color: #ebb3ba !important;
   ========================= */
 .work-section {
   width: 100%;
-  padding: 24px 16px;
+  padding: 24px 8px;
   box-sizing: border-box;
 }
 
@@ -816,6 +816,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
