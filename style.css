@@ -739,6 +739,7 @@ color: #ebb3ba !important;
   margin-left: calc(-50vw + 50%); /* ⬅️ WYJMUJE Z PADDINGU */
   text-align: center;
   display: block;
+     background: yellow !important;
 }
 
 .work-section{
@@ -807,6 +808,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
