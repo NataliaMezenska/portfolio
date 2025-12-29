@@ -746,6 +746,7 @@ color: #ebb3ba !important;
   transform: translateX(-50%);
   width: max-content;
   margin: 0;
+     font-size: 22px;
 }
 
 
@@ -818,6 +819,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
