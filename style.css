@@ -736,8 +736,8 @@ color: #ebb3ba !important;
 .work-title {
   font-size: 22px;
   text-align: center;
-  margin: 0;
-  display: inline-block;
+  margin: 0 ;
+   display: block;
 }
 
 .work-section{
@@ -806,6 +806,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
