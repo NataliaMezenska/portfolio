@@ -621,18 +621,18 @@ nav.bottom-row {
   .home-text {
     grid-area: text;
     text-align: left;
-    margin-top: 10px;
+    margin-top: 20px;
         padding-left: 5px;   /* ⬅️ odstęp tekstu od krawędzi */
   }
 
   .home-text h1 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.25;
-  font-weight: 700;
+  font-weight: 800;
   max-width: 180px;   /* ⬅️ ładne DWIE linie */
   margin-bottom: 4px;
   margin-left: 0;
- color: #f5b4c1 !important;
+ color: #ebb3ba !important;
   }
 
   .home-text h2 { 
@@ -640,7 +640,7 @@ font-size: 14px;
   font-weight: 600;
   margin: 0;     
         margin-left: 0;
-color: #f5b4c1 !important;
+color: #ebb3ba !important;
   }
 
   .photo-section {
@@ -788,6 +788,7 @@ color: #f5b4c1 !important;
     bottom: 10px;
   }
 }
+
 
 
 
