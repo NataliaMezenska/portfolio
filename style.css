@@ -738,7 +738,7 @@ color: #ebb3ba !important;
   width: 100%;
   margin: 0 auto;
   text-align: center;
-    outline: 2px solid lime; 
+     font-size: 22px !important;
 }
 
 .work-section{
@@ -807,6 +807,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
