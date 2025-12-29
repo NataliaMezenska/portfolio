@@ -669,6 +669,21 @@ color: #ebb3ba !important;
     width: 100%;
   }
 
+    .submit-btn {
+  color: #000000;              /* ← KOLOR TEKSTU */
+  background-color: #f6b7c3;   /* różowy przycisk */
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;            /* lekko pogrubiony */
+  padding: 10px 18px;
+  cursor: pointer;
+
+  /* USUWA NIEBIESKI MOBILE */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
   /* social icons – dół strony */
   .social-wrapper {
     margin-top: 40px;
@@ -788,6 +803,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
