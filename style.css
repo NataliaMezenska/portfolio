@@ -743,12 +743,8 @@ color: #ebb3ba !important;
 .work-title {
   font-size: 22px;
   font-weight: 600;
-
-  display: flex;
-  justify-content: center;
-
+  text-align: center;
   margin: 0 auto;
-  width: max-content;
 }
 
 .work-section .underline {
@@ -820,6 +816,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
