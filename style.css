@@ -753,6 +753,12 @@ color: #ebb3ba !important;
   margin: 8px 0 24px;
 }
 
+    .work-section .work-title {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  text-align: left !important;
+}
+    
   .work-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -817,6 +823,7 @@ color: #ebb3ba !important;
     bottom: 10px;
   }
 }
+
 
 
 
